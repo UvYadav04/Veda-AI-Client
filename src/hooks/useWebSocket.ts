@@ -27,9 +27,13 @@ export const useWebSocket = () => {
     // Prevent duplicate connections
     if (socket) return;
 
-    socket = io(process.env.NEXT_PUBLIC_BACKEND_API_URL || "http://localhost:5000", {
-      transports: ["websocket"],
-    });
+    socket = io(
+      (process.env.NEXT_PUBLIC_BACKEND_API_URL
+        ? process.env.NEXT_PUBLIC_BACKEND_API_URL.replace(/\/api\/?$/, "")
+        : "http://localhost:5000"),
+      {
+        transports: ["websocket"],
+      });
 
     socket.on("connect", () => {
       console.log("Connected to WebSocket server:", socket?.id);
