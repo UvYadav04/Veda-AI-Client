@@ -238,7 +238,7 @@ export default function Dashboard() {
             Please check if MongoDB and Redis are running, then retry.
           </p>
           <button
-            className="flex items-center justify-center gap-2 rounded-full bg-[#111] px-6 py-3 text-[14px] font-semibold  hover:translate-y-[-1px]"
+            className="flex items-center justify-center gap-2 rounded-full bg-white text-black px-6 py-3 text-[14px] font-semibold  hover:translate-y-[-1px]"
             onClick={() => refetch()}
           >
             <RefreshCw size={14} /> Retry
