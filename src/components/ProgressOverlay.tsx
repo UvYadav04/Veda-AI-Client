@@ -55,7 +55,7 @@ export default function ProgressOverlay() {
       {/* Desktop / Tablet Floating Card */}
       <div className="fixed bottom-5 right-5 z-[1000] hidden md:block">
         <div
-          className={`overflow-hidden rounded-[24px] border border-[var(--border-color)] bg-[rgba(255,255,255,0.92)] shadow-[0_10px_40px_rgba(0,0,0,0.12)] backdrop-blur-xl transition-all duration-300 ${collapsed ? 'w-[100px]' : 'w-[360px]'
+          className={`overflow-hidden rounded-[24px] border border-[var(--border-color)] bg-[rgba(255,255,255,0.92)] shadow-[0_10px_40px_rgba(0,0,0,0.12)] backdrop-blur-xl transition-all duration-300 ${collapsed ? 'w-[120px]' : 'w-[360px]'
             }`}
         >
           {/* Header */}
@@ -174,7 +174,7 @@ export default function ProgressOverlay() {
           {collapsed && (
             <button
               onClick={() => setCollapsed(false)}
-              className="absolute left-[-10px] top-1/2 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--border-color)] bg-white shadow-md transition hover:scale-105"
+              className="absolute left-[-4px] top-1/2 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--border-color)] bg-white shadow-md transition hover:scale-105"
             >
               <ChevronLeft size={14} />
             </button>
